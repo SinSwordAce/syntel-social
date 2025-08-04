@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media Login</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDDLeYQx6maVPYRR9Sq5y4a5bawXcEtI2w",
+    authDomain: "syntel-social.firebaseapp.com",
+    projectId: "syntel-social",
+    storageBucket: "syntel-social.firebasestorage.app",
+    messagingSenderId: "635894321556",
+    appId: "1:635894321556:web:954750ac3ccb77c3ee7f81",
+    measurementId: "G-6DX04695CZ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Welcome Back</h1>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="you@example.com"/>
+        <small class="error" id="emailError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="••••••••"/>
+        <small class="error" id="passwordError"></small>
+      </div>
+
+      <button type="submit">Log In</button>
+      <p class="signup-text">
+        Don’t have an account? <a href="#">Sign up</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
